@@ -13,8 +13,6 @@ function Buttons (props) {
             <button onClick={() => props.reset()}>All</button>
         </div>
         )
-        
-    
 }
 
 export default Buttons;
