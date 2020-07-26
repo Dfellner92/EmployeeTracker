@@ -1,6 +1,8 @@
 import React from "react";
 import Buttons from "../Buttons"
 import Title from "../Title"
+import Form from "../Form"
+import "./style.css"
 
 function ButtonAndForm(props) {
     console.log(props);
@@ -17,6 +19,16 @@ function ButtonAndForm(props) {
           femaleEmployees = {props.femaleEmployees}
           reset = {props.reset}
         />
+        <Form
+        createRecommendations = {props.createRecommendations}
+        />
+        {(props.show) &&
+        <div style={{maxHeight: "200px", maxWidth: "200px", border: "10px solid"}}>
+          {props.recommedationsArray.map(recommendation => (
+            <button onClick={() => props.showName(recommendation.name.first)}>{recommendation.name.first}</button>
+          ))}
+        </div>
+      }
     </div>
     </div>
     </div>
@@ -24,21 +36,3 @@ function ButtonAndForm(props) {
 }
 
 export default ButtonAndForm;
-
-// function ButtonAndForm(props) {
-//     return 
-//         <div>
-//         <div className="jumbotron">
-//             <h1 className="display-4">Hello, world!</h1>
-//             <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-//             <hr className="my-4">
-//                 <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-//                 <p className="lead">
-//                     <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-//                 </p>
-//             </hr>
-//         </div>
-//         </div>
-// };
-
-// export default ButtonAndForm;

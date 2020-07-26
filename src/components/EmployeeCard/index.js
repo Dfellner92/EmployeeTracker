@@ -27,9 +27,6 @@ function EmployeeCard(props) {
           </ul>
         </div>
       </div>
-      {/* <span onClick={() => props.removeEmployee(props.id)} className="remove">
-        𝘅
-      </span> */}
     </div>
   );
 }

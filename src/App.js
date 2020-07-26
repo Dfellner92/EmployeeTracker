@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
-//import Title from "./components/Title";
-//import Buttons from "./components/Buttons"
 // import axios from 'axios';
-//import Form from "./components/Form";
 import ButtonAndForm from "./components/ButtonAndForm"
 import apiJSON from "./util/API"
 
 class App extends Component {
-  // Setting this.state.employees to the employees json array
   state = {
     employees: [],
     refreshArray: [],
@@ -22,7 +18,6 @@ class App extends Component {
   }
 
   getRandomPeople = () => { 
-    console.log(apiJSON);
     this.setState({employees: apiJSON.results})
     this.setState({refreshArray: apiJSON.results})
     // axios.get('https://randomuser.me/api/?results=200&nat=us').then(response => {
@@ -143,10 +138,6 @@ class App extends Component {
     this.setState({employees: searchedEmployee});
   }
 
-
-
-
-  // Map over this.state.employees and render a employeeCard component for each employee object
   render() {
       return (
       <Wrapper>
@@ -156,22 +147,13 @@ class App extends Component {
           maleEmployees = {this.maleEmployees}
           femaleEmployees = {this.femaleEmployees}
           reset = {this.reset}
-        //  <Title>Employees List</Title>
-        
-        // <Form
-        //   createRecommendations = {this.createRecommendations}
-        // />
+          createRecommendations = {this.createRecommendations}
+          show = {this.state.show}
+          recommedationsArray = {this.state.recommedationsArray}
+          showName ={this.showName}
       />
-      {(this.state.show) &&
-        <div style={{maxHeight: "200px", maxWidth: "200px", border: "10px solid"}}>
-          {this.state.recommedationsArray.map(recommendation => (
-            <button onClick={() => this.showName(recommendation.name.first)}>{recommendation.name.first}</button>
-          ))}
-        </div>
-      }
         {this.state.employees.map(employee => (
           <EmployeeCard
-            // removeEmployee={this.removeEmployee}
             id={employee.id}
             key={employee.id}
             nameTitle={employee.name.title}
