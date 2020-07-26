@@ -4,7 +4,7 @@ import Wrapper from "./components/Wrapper";
 // import axios from 'axios';
 import ButtonAndForm from "./components/ButtonAndForm"
 import apiJSON from "./util/API"
-/// main com
+
 class App extends Component {
   state = {
     employees: [],

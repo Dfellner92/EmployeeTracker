@@ -1,0 +1,9 @@
+Form {
+    margin: 5px;
+    padding: 10px;
+    float: right;
+    background-color: #2A77AE;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}

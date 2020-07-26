@@ -5,8 +5,12 @@
 }
 
 
-/* .Jumbotron {
-    position: relative;
-    min-width: 100%;
-    background-color: green;
-} */
+.Jumbotron {
+    background-color: #6CADDC;
+    padding: 20px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+
