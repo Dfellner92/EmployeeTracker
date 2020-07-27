@@ -20,13 +20,13 @@ function ButtonAndForm(props) {
         <Form
           createRecommendations={props.createRecommendations}
         />
-        {(props.show) &&
-          <div style={{ maxHeight: "200px", maxWidth: "200px", border: "10px solid" }}>
+         {(props.show) &&
+          <div className="displayBox" style={{ maxHeight: "200px", maxWidth: "200px", border: "5px solid", margin: "5px" }}>
             {props.recommedationsArray.map(recommendation => (
-              <button onClick={() => props.showName(recommendation.name.first)}>{recommendation.name.first}</button>
+              <button onClick={() => props.showName(recommendation.name.last)}>{recommendation.name.last}</button>
             ))}
           </div>
-        }
+        } 
       </div>
     </div>
   )

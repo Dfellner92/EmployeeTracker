@@ -6,8 +6,6 @@ export default class Form extends React.Component {
         name: ""
     }
 
-
-
     handleChange = e => {
         this.setState({name: e.target.value}, () => {
             this.props.createRecommendations(this.state.name);
@@ -20,7 +18,7 @@ export default class Form extends React.Component {
                 <input onChange={this.handleChange} value={this.state.name}>
                 </input>
                 <button>
-                    search by name
+                    Last Name Search
                 </button>
             </form>
         )

@@ -10,7 +10,7 @@ class App extends Component {
     employees: [],
     refreshArray: [],
     recommedationsArray: [],
-    show: false
+    show: false,
   };
 
   async componentDidMount() {
@@ -124,7 +124,7 @@ class App extends Component {
   createLoop = term => {
     const sliceArray = [];
     for (var i =0; i < this.state.refreshArray.length; i++) {
-      const slicedName = this.state.refreshArray[i].name.first.slice(0, term.length).toLowerCase();
+      const slicedName = this.state.refreshArray[i].name.last.slice(0, term.length).toLowerCase();
       if (slicedName === term) {
         sliceArray.push(this.state.refreshArray[i])
       }
@@ -132,9 +132,9 @@ class App extends Component {
     this.setState({recommedationsArray: sliceArray});
   }
 
-  showName =  first => {
-    console.log(first);
-    const searchedEmployee = this.state.refreshArray.filter(person => person.name.first === first);
+  showName =  last => {
+    console.log(last);
+    const searchedEmployee = this.state.refreshArray.filter(person => person.name.last === last);
     this.setState({employees: searchedEmployee});
   }
 
@@ -150,7 +150,8 @@ class App extends Component {
           createRecommendations = {this.createRecommendations}
           show = {this.state.show}
           recommedationsArray = {this.state.recommedationsArray}
-          showName ={this.showName}
+          showName = {this.showName}
+          recommendation = {this.state.recommendation}
       />
         {this.state.employees.map(employee => (
           <EmployeeCard

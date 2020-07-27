@@ -13,4 +13,10 @@
     border-width: 1px;
 }
 
+.displayBox {
+  max-height: "200px";
+  max-width: "200px";
+  border: "5px solid";
+}
+
 
