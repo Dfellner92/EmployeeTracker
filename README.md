@@ -2,9 +2,9 @@
 
 ## Installation
 
-The project was uploaded to GitHub at the following repository: https://github.com/Dfellner92/weatherDashboard
+The project was uploaded to GitHub at the following repository: https://github.com/Dfellner92/EmployeeTracker
 
-You can access the deployed application with the GitHup Pages link: https://dfellner92.github.io/weatherDashboard/
+You can access the deployed application with the Heroku link: https://employee-tracker-dfellner.herokuapp.com/
 
 
 ## Usage
